@@ -1,0 +1,73 @@
+.sideBar{
+    -fx-background-color: #302D27;
+    -fx-border-color: white;
+    -fx-border-width: 0 2 0 0;
+}
+
+.sideBarIcon{
+    -fx-translate-x : 20;
+}
+
+.sideBarMenus: hover{
+    -fx-border-width: 0 0 0 10;
+    -fx-border-color: white;
+}
+
+.dialogBox{
+    -fx-background-color: #F4F4F4;
+}
+
+.dialogImageView{
+    -fx-translate-x: 160;
+}
+
+.dialogLabel{
+    -fx-translate-x: 30;
+}
+
+.dialogTextField{
+    -fx-translate-x: 30;
+    -fx-padding: 15 0 0 0;
+    -fx-text-fill: black;
+}
+
+.dialogCreateButton{
+    -fx-background-color: #302D27;
+    -fx-border-radius: 0;
+}
+
+.dialogCreateButton: hover{
+    -fx-background-color: #499C54;
+}
+
+.dialogCancelButton: hover{
+    -fx-background-color: #BE6A53;
+}
+
+.dialogCancelButton{
+    -fx-background-color: #302D27;
+    -fx-border-radius: 0;
+}
+
+.textArea {
+    -fx-translate-x: 30;
+    -fx-control-inner-background: #F4F4F4;
+    -fx-border-color: #302D27;
+    -fx-border-width: 1 0 0 0;
+}
+
+.alertBoxOK{
+    -fx-background-color: #499C54;
+}
+
+.alertBoxCancel{
+    -fx-background-color: #BE6A53;
+}
+
+.pane{
+    -fx-background-image: url("cyber.jpeg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}

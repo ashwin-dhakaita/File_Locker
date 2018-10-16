@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="498.0" style="-fx-padding: 50 0 0 0;" styleClass="dialogBox" stylesheets="@../viper.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AboutController">
+    <children>
+        <HBox prefHeight="100.0" prefWidth="498.0" style="-fx-padding: 30 0 0 0;">
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 30;">
+                    <image>
+                        <Image url="@../icons8-about-filled-50.png" />
+                    </image>
+                </ImageView>
+                <Label prefHeight="60.0" prefWidth="298.0" style="-fx-translate-x: 50;" text="About :">
+                    <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+      <VBox layoutX="30.0" layoutY="111.0" prefHeight="376.0" prefWidth="449.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="234.0" text="Developed by :   Ashwin Dhakaita">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="234.0" text="Employs :">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="49.0" onMouseClicked="#loadLink1" prefHeight="40.0" prefWidth="464.0" text="                 Encryptor4j by Martinwithaar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="10.0" layoutY="89.0" onMouseClicked="#loadLink2" prefHeight="40.0" prefWidth="464.0" text="                 Recognito by Amaurycrickx">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</Pane>
