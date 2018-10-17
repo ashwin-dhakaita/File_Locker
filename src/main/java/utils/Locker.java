@@ -120,9 +120,11 @@ public class Locker implements Serializable {
     }
 
     public void removeFromLocker(String userName, String fileName) throws Exception {
-        File file = new File(userName+"//"+lockerName+"//"+fileName);
         openLocker();
-        FileUtils.copyFile(new File(userName+"//"+fileName),file);
+        File file = new File(fileName);
+        File destinationFile = new File(userName+"//"+fileName.substring(fileName.lastIndexOf("\\")+1));
+        destinationFile.createNewFile();
+        FileUtils.copyFile(file,destinationFile);
         FileUtils.forceDelete(file);
         closeLocker();
     }

@@ -139,6 +139,14 @@ public class Main extends Application {
             }
         });
         new Thread(task2).start();
+        /*
+        Store<User> store = new Store<>("UserData");
+        User user = new User("Ashwin");
+        user.addProperty("voice",false);
+        user.addProperty("masterpassword", true);
+        user.addProperty("password", "Excaliber17");
+        User.addUser("Ashwin", user);
+        */
     }
 
     private Stage createWindow(Stage stage, String fxml){

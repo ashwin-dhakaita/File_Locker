@@ -29,6 +29,10 @@ public class LockerBarController implements Initializable {
     @FXML
     public File clickOpen() throws Exception {
 
+        String lockerName = label.getText();
+        Locker locker = user.getLocker(lockerName);
+        String lockerPassword = locker.getPassword();
+        userPasswordController.setPassword(lockerPassword);
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userPassword.fxml"));
         Parent root = loader.load();
@@ -37,10 +41,6 @@ public class LockerBarController implements Initializable {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.showAndWait();
         userPasswordController controller = loader.getController();
-        String lockerName = label.getText();
-        Locker locker = user.getLocker(lockerName);
-        String lockerPassword = locker.getPassword();
-        userPasswordController.setPassword(lockerPassword);
         locker.openLocker();
         File file = openFileWindow(userName+"//"+lockerName);
         locker.closeLocker();
@@ -50,23 +50,25 @@ public class LockerBarController implements Initializable {
     @FXML
     public void clickAddFiles() throws Exception {
         File file = clickOpen();
+        if(file==null)return;
         String lockerName = label.getText();
-        Locker locker = user.getLocker(userName+"//"+lockerName);
+        Locker locker = user.getLocker(lockerName);
         locker.addToLocker(file.getPath());
+    }
+
+    @FXML
+    public void clickRemoveFiles() throws Exception {
+        File file = clickOpen();
+        if(file==null)return;
+        String lockerName = label.getText();
+        Locker locker = user.getLocker(lockerName);
+        locker.removeFromLocker(userName, file.getPath());
     }
 
     private File openFileWindow(String fileName){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(fileName));
         return fileChooser.showOpenDialog(null);
-    }
-
-    @FXML
-    public void clickRemoveFiles() throws Exception {
-        File file = clickOpen();
-        String lockerName = label.getText();
-        Locker locker = user.getLocker(userName+"//"+lockerName);
-        locker.removeFromLocker(userName, file.getName());
     }
 
 }
