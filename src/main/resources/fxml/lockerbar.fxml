@@ -17,13 +17,14 @@
                   <Image url="@../icons8-safe-30.png" />
                </image>
             </ImageView>
-            <Label fx:id="label" prefHeight="39.0" prefWidth="259.0" text="Label">
+            <Label fx:id="label" prefHeight="39.0" prefWidth="173.0" text="Label">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
             <Button mnemonicParsing="false" onAction="#clickOpen" prefHeight="26.0" prefWidth="52.0" style="-fx-translate-y: 7;" text="Open" />
             <Button layoutX="329.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickAddFiles" prefHeight="26.0" prefWidth="69.0" style="-fx-translate-y: 7;" text="Add Files" />
+            <Button layoutX="311.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickRemoveFiles" prefHeight="26.0" prefWidth="88.0" style="-fx-translate-y: 7;" text="Remove File" />
          </children>
       </HBox>
    </children>
