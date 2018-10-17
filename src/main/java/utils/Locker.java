@@ -119,6 +119,14 @@ public class Locker implements Serializable {
         FileUtils.forceDelete(file);
     }
 
+    public void removeFromLocker(String userName, String fileName) throws Exception {
+        File file = new File(userName+"//"+lockerName+"//"+fileName);
+        openLocker();
+        FileUtils.copyFile(new File(userName+"//"+fileName),file);
+        FileUtils.forceDelete(file);
+        closeLocker();
+    }
+
     public String getPassword(){
         return password;
     }

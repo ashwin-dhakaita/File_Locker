@@ -61,4 +61,12 @@ public class LockerBarController implements Initializable {
         return fileChooser.showOpenDialog(null);
     }
 
+    @FXML
+    public void clickRemoveFiles() throws Exception {
+        File file = clickOpen();
+        String lockerName = label.getText();
+        Locker locker = user.getLocker(userName+"//"+lockerName);
+        locker.removeFromLocker(userName, file.getName());
+    }
+
 }
